@@ -1,0 +1,23 @@
+.MainContent {
+    height: 81%;
+    margin: 2px;
+}
+
+.GridGroup{
+    height: 100%;
+}
+
+.Paper {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 94%;
+}
+
+.Button {
+    height: 120px;
+}
+
+.ButtonGrp {
+    margin-top: 50px;
+}

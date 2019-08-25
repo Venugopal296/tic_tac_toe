@@ -1,0 +1,3 @@
+export const START_CLICKED = 'START_CLICKED';
+export const RESET_CLICKED = 'RESET_CLICKED';
+export const BUTTON_CLICKED = 'BUTTON_CLICKED';
