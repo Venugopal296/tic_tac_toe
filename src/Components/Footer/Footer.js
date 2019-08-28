@@ -1,27 +1,34 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import classesStyle from './Footer.module.css';
 
 const usestyles = makeStyles(theme => ({
     title: {
         flexGrow: 1,
-    }
+    },
+    footer: {
+        background: 'rgba(0,0,0,.8)',
+        border: 0,
+        borderRadius: 3,
+        boxShadow: '0 5px 5px 0 rgba(0,0,0, .9)',
+        color: 'white',
+        padding: '0 30px',
+      }
 }));
 
 
 const footer = (props) => {
     const classes = usestyles();
     return (
-        <Fragment>
-            <AppBar color="default" position="static" className={classesStyle.Footer}>
+        <div>
+            <AppBar position="static" className={classes.footer}>
                 <Toolbar>
                     <Typography variant="caption" className={classes.title}>
                         @Copy rights
                     </Typography>
                 </Toolbar>
             </AppBar>
-        </Fragment>
+        </div>
     );
 }
 

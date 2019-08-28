@@ -15,6 +15,8 @@ const initiatState = {
     },
     player1Active: false,
     player2Active: false,
+    player1Name: 'Player 1',
+    player2Name: 'Player 2',
     player1Array: [],
     player2Array: [],
     winner: null,
@@ -90,6 +92,8 @@ const reducers = (state = initiatState, action) => {
                 },
                 player1Active: false,
                 player2Active: false,
+                player1Name: 'Player 1',
+                player2Name: 'Player 2',
                 player1Array: [],
                 player2Array: [],
                 winner: null,
@@ -117,19 +121,17 @@ const reducers = (state = initiatState, action) => {
                     combinationOutput = sets(player2Arr, 3);
                 }
             }
-            console.log(combinationOutput);
             for (let i = 0; i < combinationOutput.length; i++) {
                 if (!hasOutput) {
                     hasOutput = winningValues.includes(combinationOutput[i]);
-                    console.log('out: ', hasOutput);
                 }
             }
 
             if (hasOutput) {
                 if (player1) {
-                    matchWinner = 'player 1'
+                    matchWinner = state.player1Name
                 } else {
-                    matchWinner = 'player 2'
+                    matchWinner = state.player2Name
                 }
             }
 
@@ -143,6 +145,21 @@ const reducers = (state = initiatState, action) => {
                 winner: matchWinner,
                 gameOver: hasOutput
             }
+
+            case actionTypes.NAME_UPDATE:
+                let player1N = state.player1Name;
+                let player2N = state.player2Name;
+                if(action.player === 'player1') {
+                    player1N = action.value
+                } else {
+                    player2N = action.value
+                }
+
+                return {
+                    ...state,
+                    player1Name: player1N,
+                    player2Name: player2N
+                }
 
         default:
             return state;

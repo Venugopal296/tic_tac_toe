@@ -1,11 +1,30 @@
 import React, { Fragment } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Button, ButtonGroup } from '@material-ui/core';
 import { connect } from 'react-redux';
 
 import * as actionCreators from '../../Redux/ActionCreators/ActionCreators';
 import classes from './GameField.module.css';
 
+const usestyles = makeStyles(theme => ({
+    Paper: {
+        padding: 10,
+        marginTop : 10,
+        marginBottom : 10,
+        height: '94%',
+        background: 'rgba(0,0,0,.7)',
+        boxShadow: '5px 5px 1px 0 rgba(0,0,0, .9)',
+    },
+    Button: {
+        height: 120,
+        border: '2px solid black',
+        color: '#ffffff',
+        fontSize: 30
+    }
+}));
+
 const gameField = (props) => {
+    const classesStyle = usestyles();
 
     const onButtonClicked = (value) => {
         props.onButtonClick(value);
@@ -13,26 +32,25 @@ const gameField = (props) => {
 
     return (
         <Fragment>
-            <Paper className={classes.Paper}>
+            <Paper className={classesStyle.Paper}>
                 <div className={classes.ButtonGrp}>
                     <ButtonGroup
                         fullWidth
-                        aria-label="outlined primary button group"
                         disabled={!props.gameStarted}>
                         <Button
-                            className={classes.Button}
+                            className={classesStyle.Button}
                             onClick={() => onButtonClicked(1)}
                             disabled={props.totalArr[1]}>
                             1
                         </Button>
                         <Button
-                            className={classes.Button}
+                            className={classesStyle.Button}
                             onClick={() => onButtonClicked(2)}
                             disabled={props.totalArr[2]}>
                             2
                         </Button>
                         <Button
-                            className={classes.Button}
+                            className={classesStyle.Button}
                             onClick={() => onButtonClicked(3)}
                             disabled={props.totalArr[3]}>
                             3
@@ -44,19 +62,19 @@ const gameField = (props) => {
                         aria-label="outlined primary button group"
                         disabled={!props.gameStarted}>
                         <Button
-                            className={classes.Button}
+                            className={classesStyle.Button}
                             onClick={() => onButtonClicked(4)}
                             disabled={props.totalArr[4]}>
                             4
                         </Button>
                         <Button
-                            className={classes.Button}
+                            className={classesStyle.Button}
                             onClick={() => onButtonClicked(5)}
                             disabled={props.totalArr[5]}>
                             5
                         </Button>
                         <Button
-                            className={classes.Button}
+                            className={classesStyle.Button}
                             onClick={() => onButtonClicked(6)}
                             disabled={props.totalArr[6]}>
                             6
@@ -68,19 +86,19 @@ const gameField = (props) => {
                         aria-label="outlined primary button group"
                         disabled={!props.gameStarted}>
                         <Button
-                            className={classes.Button}
+                            className={classesStyle.Button}
                             onClick={() => onButtonClicked(7)}
                             disabled={props.totalArr[7]}>
                             7
                         </Button>
                         <Button
-                            className={classes.Button}
+                            className={classesStyle.Button}
                             onClick={() => onButtonClicked(8)}
                             disabled={props.totalArr[8]}>
                             8
                         </Button>
                         <Button
-                            className={classes.Button}
+                            className={classesStyle.Button}
                             onClick={() => onButtonClicked(9)}
                             disabled={props.totalArr[9]}>
                             9
