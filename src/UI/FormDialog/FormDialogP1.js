@@ -11,7 +11,7 @@ const FormDialog = (props) => {
   return (
     <Fragment>
       <Dialog open={props.open} onClose={props.onClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Enter your Name1</DialogTitle>
+        <DialogTitle id="form-dialog-title">Enter your Name</DialogTitle>
         <DialogContent>
           <TextField 
             autoFocus
