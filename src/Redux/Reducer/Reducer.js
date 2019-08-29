@@ -204,8 +204,6 @@ const reducers = (state = initiatState, action) => {
                 drawn = drawn + 1;
             }
 
-            console.log(oldCount);
-
             return {
                 ...state,
                 selectedValues: oldslectedValues,
