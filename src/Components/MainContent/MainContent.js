@@ -22,9 +22,9 @@ const usestyles = makeStyles(theme => ({
         boxShadow: '5px 5px 1px 0 rgba(0,0,0, .9)',
     },
     Button: {
-        background: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(99,5,2,0.8687850140056023) 100%)',
+        background: 'linear-gradient(45deg, rgba(208,124,13,0.8687850140056023) 40%, rgba(250,199,127,1) 100%)',
         fontWeight: 'bold',
-        color: '#fafafa',
+        color: '#ffffff',
     },
     rightIcon: {
         marginLeft: theme.spacing(1),
@@ -32,6 +32,11 @@ const usestyles = makeStyles(theme => ({
     lsftIcon: {
         marginRight: theme.spacing(1),
     },
+    winPara: {
+        color: '#ffffff',
+        marginTop: 30,
+        fontSize: 32        
+    }
 }));
 
 const mainContent = (props) => {
@@ -100,6 +105,7 @@ const mainContent = (props) => {
                                 />
                             </Button>
                         </ButtonGroup>
+                        <p className={classesStyle.winPara}>Win: {props.player1Win}</p>
                     </Paper>
                 </Grid>
 
@@ -132,6 +138,7 @@ const mainContent = (props) => {
                                 />
                             </Button>
                         </ButtonGroup>
+                        <p className={classesStyle.winPara}>Win: {props.player2Win}</p>
                     </Paper>
                 </Grid>
             </Grid>
@@ -149,6 +156,8 @@ const mapStatetoProps = (state) => {
         player2: state.player2Active,
         player1Name: state.player1Name,
         player2Name: state.player2Name,
+        player1Win: state.player1Win,
+        player2Win: state.player2Win,
     }
 }
 
