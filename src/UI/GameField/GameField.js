@@ -34,262 +34,265 @@ const gameField = (props) => {
         props.onButtonClick(value);
     }
 
+    let gameArea = <div className={classes.startGame}>Start the Game</div>
+
+    if (props.gameStarted) {
+        gameArea = (
+            <div className={classes.ButtonGrp}>
+                <ButtonGroup
+                    fullWidth
+                    disabled={!props.gameStarted}>
+                    <Button
+                        className={classesStyle.Button}
+                        onClick={() => onButtonClicked(1)}
+                        disabled={props.totalArr[1]}
+                        style={{ border: props.totalArr[1] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
+                    >
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p1Values[1] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            X
+                            </p>
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p2Values[1] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            O
+                            </p>
+                        </Button>
+                    <Button
+                        className={classesStyle.Button}
+                        onClick={() => onButtonClicked(2)}
+                        disabled={props.totalArr[2]}
+                        style={{ border: props.totalArr[2] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
+                    >
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p1Values[2] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            X
+                            </p>
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p2Values[2] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            O
+                            </p>
+                        </Button>
+                    <Button
+                        className={classesStyle.Button}
+                        onClick={() => onButtonClicked(3)}
+                        disabled={props.totalArr[3]}
+                        style={{ border: props.totalArr[3] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
+                    >
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p1Values[3] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            X
+                            </p>
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p2Values[3] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            O
+                            </p>
+                        </Button>
+                </ButtonGroup>
+
+                <ButtonGroup
+                    fullWidth
+                    aria-label="outlined primary button group"
+                    disabled={!props.gameStarted}>
+                    <Button
+                        className={classesStyle.Button}
+                        onClick={() => onButtonClicked(4)}
+                        disabled={props.totalArr[4]}
+                        style={{ border: props.totalArr[4] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
+                    >
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p1Values[4] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            X
+                            </p>
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p2Values[4] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            O
+                            </p>
+                        </Button>
+                    <Button
+                        className={classesStyle.Button}
+                        onClick={() => onButtonClicked(5)}
+                        disabled={props.totalArr[5]}
+                        style={{ border: props.totalArr[5] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
+                    >
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p1Values[5] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            X
+                            </p>
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p2Values[5] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            O
+                            </p>
+                        </Button>
+                    <Button
+                        className={classesStyle.Button}
+                        onClick={() => onButtonClicked(6)}
+                        disabled={props.totalArr[6]}
+                        style={{ border: props.totalArr[6] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
+                    >
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p1Values[6] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            X
+                            </p>
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p2Values[6] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            O
+                            </p>
+                        </Button>
+                </ButtonGroup>
+
+                <ButtonGroup
+                    fullWidth
+                    aria-label="outlined primary button group"
+                    disabled={!props.gameStarted}>
+                    <Button
+                        className={classesStyle.Button}
+                        onClick={() => onButtonClicked(7)}
+                        disabled={props.totalArr[7]}
+                        style={{ border: props.totalArr[7] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
+                    >
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p1Values[7] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            X
+                            </p>
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p2Values[7] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            O
+                            </p>
+                        </Button>
+                    <Button
+                        className={classesStyle.Button}
+                        onClick={() => onButtonClicked(8)}
+                        disabled={props.totalArr[8]}
+                        style={{ border: props.totalArr[8] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
+                    >
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p1Values[8] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            X
+                            </p>
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p2Values[8] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            O
+                            </p>
+                        </Button>
+                    <Button
+                        className={classesStyle.Button}
+                        onClick={() => onButtonClicked(9)}
+                        disabled={props.totalArr[9]}
+                        style={{ border: props.totalArr[9] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
+                    >
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p1Values[9] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            X
+                            </p>
+                        <p
+                            style={{
+                                color: '#ffffff',
+                                display: props.p2Values[9] ? 'block' : 'none',
+                                fontSize: 30
+                            }}
+                        >
+                            O
+                            </p>
+                        </Button>
+                </ButtonGroup>
+            </div>
+        )
+    }
+
     return (
         <Fragment>
             <Paper className={classesStyle.Paper}>
-                <div className={classes.ButtonGrp}>
-                    <ButtonGroup
-                        fullWidth
-                        disabled={!props.gameStarted}>
-                        <Button
-                            className={classesStyle.Button}
-                            onClick={() => onButtonClicked(1)}
-                            disabled={props.totalArr[1]}
-                            style={{ border: props.totalArr[1] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
-                        >
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p1Values[1] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                X
-                            </p>
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p2Values[1] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                O
-                            </p>
-                            1
-                        </Button>
-                        <Button
-                            className={classesStyle.Button}
-                            onClick={() => onButtonClicked(2)}
-                            disabled={props.totalArr[2]}
-                            style={{ border: props.totalArr[2] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
-                        >
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p1Values[2] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                X
-                            </p>
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p2Values[2] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                O
-                            </p>
-                            2
-                        </Button>
-                        <Button
-                            className={classesStyle.Button}
-                            onClick={() => onButtonClicked(3)}
-                            disabled={props.totalArr[3]}
-                            style={{ border: props.totalArr[3] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
-                        >
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p1Values[3] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                X
-                            </p>
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p2Values[3] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                O
-                            </p>
-                            3
-                        </Button>
-                    </ButtonGroup>
-
-                    <ButtonGroup
-                        fullWidth
-                        aria-label="outlined primary button group"
-                        disabled={!props.gameStarted}>
-                        <Button
-                            className={classesStyle.Button}
-                            onClick={() => onButtonClicked(4)}
-                            disabled={props.totalArr[4]}
-                            style={{ border: props.totalArr[4] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
-                        >
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p1Values[4] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                X
-                            </p>
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p2Values[4] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                O
-                            </p>
-                            4
-                        </Button>
-                        <Button
-                            className={classesStyle.Button}
-                            onClick={() => onButtonClicked(5)}
-                            disabled={props.totalArr[5]}
-                            style={{ border: props.totalArr[5] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
-                        >
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p1Values[5] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                X
-                            </p>
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p2Values[5] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                O
-                            </p>
-                            5
-                        </Button>
-                        <Button
-                            className={classesStyle.Button}
-                            onClick={() => onButtonClicked(6)}
-                            disabled={props.totalArr[6]}
-                            style={{ border: props.totalArr[6] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
-                        >
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p1Values[6] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                X
-                            </p>
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p2Values[6] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                O
-                            </p>
-                            6
-                        </Button>
-                    </ButtonGroup>
-
-                    <ButtonGroup
-                        fullWidth
-                        aria-label="outlined primary button group"
-                        disabled={!props.gameStarted}>
-                        <Button
-                            className={classesStyle.Button}
-                            onClick={() => onButtonClicked(7)}
-                            disabled={props.totalArr[7]}
-                            style={{ border: props.totalArr[7] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
-                        >
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p1Values[7] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                X
-                            </p>
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p2Values[7] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                O
-                            </p>
-                            7
-                        </Button>
-                        <Button
-                            className={classesStyle.Button}
-                            onClick={() => onButtonClicked(8)}
-                            disabled={props.totalArr[8]}
-                            style={{ border: props.totalArr[8] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
-                        >
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p1Values[8] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                X
-                            </p>
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p2Values[8] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                O
-                            </p>
-                            8
-                        </Button>
-                        <Button
-                            className={classesStyle.Button}
-                            onClick={() => onButtonClicked(9)}
-                            disabled={props.totalArr[9]}
-                            style={{ border: props.totalArr[9] ? '2px solid #bdbdbd' : '2px solid #bdbdbd' }}
-                        >
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p1Values[9] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                X
-                            </p>
-                            <p
-                                style={{ 
-                                    color: '#ffffff', 
-                                    display: props.p2Values[9] ? 'block' : 'none',
-                                    fontSize: 30
-                                 }}
-                            >
-                                O
-                            </p>
-                            9
-                        </Button>
-                    </ButtonGroup>
+                <div className={classes.gameBox}>
+                    {gameArea}
                 </div>
-                <p className={classesStyle.winPara}>No Result: {props.draw}</p>
+                <div>
+                    <p className={classesStyle.winPara}>No Result: {props.draw}</p>
+                </div>
             </Paper>
         </Fragment>
     );

@@ -9,6 +9,20 @@
     height: 120px;
 }
 
+.gameBox {
+    height: 410px;
+    position: relative;
+}
+
 .ButtonGrp {
-    margin-top: 50px;
+    /* margin-top: 50px; */
+}
+
+.startGame {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 30%;
 }
