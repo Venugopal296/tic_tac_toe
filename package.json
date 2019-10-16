@@ -2,7 +2,7 @@
   "name": "tic_tac_toe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://venugopal296.github.io/tic_tac_toe",
+  "homepage": "https://Venugopal296.github.io/tic_tac_toe",
   "dependencies": {
     "@material-ui/core": "^4.3.3",
     "@material-ui/icons": "^4.2.1",
