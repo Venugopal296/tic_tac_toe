@@ -2,7 +2,7 @@ import { Button, ButtonGroup, Grid, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import EditIcon from '@material-ui/icons/Edit';
 import FaceIcon from '@material-ui/icons/Face';
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../Redux/ActionCreators/ActionCreators';
 import FormDialogP1 from '../../UI/FormDialog/FormDialogP1';
@@ -38,9 +38,9 @@ const usestyles = makeStyles(theme => ({
 }));
 
 const mainContent = (props) => {
-    const [openP1, setOpenP1] = useState(false);
-    const [openP2, setOpenP2] = useState(false);
-    const [name, setName] = useState('');
+    const [openP1, setOpenP1] = React.useState(false);
+    const [openP2, setOpenP2] = React.useState(false);
+    const [name, setName] = React.useState('');
 
     const classesStyle = usestyles();
 
