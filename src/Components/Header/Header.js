@@ -34,7 +34,7 @@ const usestyles = makeStyles(theme => ({
     },
 }));
 
-const header = (props) => {
+const Header = (props) => {
     const classes = usestyles();
     return (
         <Fragment>
@@ -79,4 +79,4 @@ const mapDipatchtoProps = (dispatch) => {
     }
 }
 
-export default connect(mapStatetoProps, mapDipatchtoProps)(header);
+export default connect(mapStatetoProps, mapDipatchtoProps)(Header);

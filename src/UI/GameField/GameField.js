@@ -27,7 +27,7 @@ const usestyles = makeStyles(theme => ({
     }
 }));
 
-const gameField = (props) => {
+const GameField = (props) => {
     const classesStyle = usestyles();
 
     const onButtonClicked = (value) => {
@@ -314,4 +314,4 @@ const mapDipatchtoProps = (dispatch) => {
     }
 }
 
-export default connect(mapStatetoProps, mapDipatchtoProps)(gameField);
+export default connect(mapStatetoProps, mapDipatchtoProps)(GameField);

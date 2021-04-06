@@ -17,7 +17,7 @@ const usestyles = makeStyles(theme => ({
 }));
 
 
-const footer = (props) => {
+const Footer = (props) => {
     const classes = usestyles();
     return (
         <div>
@@ -32,4 +32,4 @@ const footer = (props) => {
     );
 }
 
-export default footer;
+export default Footer;

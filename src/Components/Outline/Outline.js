@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import MainContent from '../MainContent/MainContent';
 import classes from './Outline.module.css';
 
-const outline = () => {
+const Outline = () => {
     return (
         <div className={classes.Outline}>
             <Header />
@@ -14,4 +14,4 @@ const outline = () => {
     );
 }
 
-export default outline;
+export default Outline;

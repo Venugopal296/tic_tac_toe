@@ -23,7 +23,7 @@ const usestyles = makeStyles(theme => ({
     },
 }));
 
-const modal = (props) => {
+const Modal = (props) => {
     const classes = usestyles();
 
     const handleClose = () => {
@@ -65,4 +65,4 @@ const mapDipatchtoProps = (dispatch) => {
     }
 }
 
-export default connect(mapStatetoProps, mapDipatchtoProps)(modal);
+export default connect(mapStatetoProps, mapDipatchtoProps)(Modal);

@@ -37,7 +37,7 @@ const usestyles = makeStyles(theme => ({
     }
 }));
 
-const mainContent = (props) => {
+const MainContent = (props) => {
     const [openP1, setOpenP1] = React.useState(false);
     const [openP2, setOpenP2] = React.useState(false);
     const [name, setName] = React.useState('');
@@ -164,4 +164,4 @@ const mapDipatchtoProps = (dispatch) => {
     }
 }
 
-export default connect(mapStatetoProps, mapDipatchtoProps)(mainContent);
+export default connect(mapStatetoProps, mapDipatchtoProps)(MainContent);
