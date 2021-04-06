@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import { Button, ButtonGroup, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Button, ButtonGroup } from '@material-ui/core';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-
 import * as actionCreators from '../../Redux/ActionCreators/ActionCreators';
 import classes from './GameField.module.css';
+
 
 const usestyles = makeStyles(theme => ({
     Paper: {

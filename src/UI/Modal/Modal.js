@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
-import { Modal, Fade } from '@material-ui/core';
+import { Fade, Modal } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-
 import * as actionCreators from '../../Redux/ActionCreators/ActionCreators';
 import classesModal from './Modal.module.css';
+
 
 const usestyles = makeStyles(theme => ({
     modal: {

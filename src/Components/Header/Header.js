@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
-import { AppBar, Toolbar, Typography, Button, Avatar } from '@material-ui/core';
+import { AppBar, Avatar, Button, Toolbar, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-
-import * as actionCreators from '../../Redux/ActionCreators/ActionCreators';
 import Panda from '../../Assets/Images/—Pngtree—panda xiong bao baby hand-painted_3860457.png';
+import * as actionCreators from '../../Redux/ActionCreators/ActionCreators';
+
 
 const usestyles = makeStyles(theme => ({
     header: {

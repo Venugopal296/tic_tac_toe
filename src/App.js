@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './App.module.css';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-
-import Outline from './Components/Outline/Outline'
+import { createStore } from 'redux';
+import classes from './App.module.css';
+import Outline from './Components/Outline/Outline';
 import rootReducer from './Redux/Reducer/Reducer';
+
 
 const store = createStore(rootReducer);
 

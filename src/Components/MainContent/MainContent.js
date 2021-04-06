@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import { Button, ButtonGroup, Grid, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Button, ButtonGroup } from '@material-ui/core';
-import FaceIcon from '@material-ui/icons/Face';
 import EditIcon from '@material-ui/icons/Edit';
+import FaceIcon from '@material-ui/icons/Face';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
-
 import * as actionCreators from '../../Redux/ActionCreators/ActionCreators';
-import ModalUI from '../../UI/Modal/Modal';
-import GameField from '../../UI/GameField/GameField';
 import FormDialogP1 from '../../UI/FormDialog/FormDialogP1';
 import FormDialogP2 from '../../UI/FormDialog/FormDialogP2';
-
+import GameField from '../../UI/GameField/GameField';
+import ModalUI from '../../UI/Modal/Modal';
 import classes from './MainContent.module.css';
 
 const usestyles = makeStyles(theme => ({
@@ -40,11 +38,8 @@ const usestyles = makeStyles(theme => ({
 }));
 
 const mainContent = (props) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [openP1, setOpenP1] = useState(false);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [openP2, setOpenP2] = useState(false);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [name, setName] = useState('');
 
     const classesStyle = usestyles();
